@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Noto%20Sans");
+.home {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  .filters {
+    padding-left: 50px;
+
+    padding-top: 50px;
+  }
+  .sat-row {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+.header {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.footer-container {
+  bottom: 1;
+  padding: 20px;
+  text-align: center;
+  font-family: "Noto Sans";
+  h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 700px) and(orientation: portrait) {
+  .home {
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    .filters {
+      padding-left: 0px;
+    }
+  }
+  .footer-container {
+    padding: 10px;
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and(max-width: 900px) {
+  .home {
+    gap: 0px;
+    .filters {
+      padding-left: 20px;
+    }
+  }
+  .footer-container {
+    padding: 10px;
+    h1 {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and(min-width: 1441px) {
+  .home {
+    gap: 0px;
+    .filters {
+      padding-left: 50px;
+    }
+  }
+  .footer-container {
+    padding: 10px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}

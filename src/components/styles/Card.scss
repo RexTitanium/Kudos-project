@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Open%20Sans");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.card-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  object-fit: contain;
+  padding-left: 50px;
+  padding-right: 10px;
+  gap: 10px;
+  margin-top: 50px;
+
+  .card-wrapper {
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    width: 260px;
+    height: 420px;
+    overflow: hidden;
+    .image-wrapper {
+      background-color: #f1f1f1;
+
+      padding: 20px 20px;
+      img {
+        width: 100%;
+      }
+    }
+    h1 {
+      margin-bottom: 5px;
+      font-size: 13px;
+
+      font-family: "Roboto";
+    }
+    .card-details {
+      padding-left: 0px;
+      h1 {
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+.sat-name {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #54578f;
+}
+
+.mission-id ul {
+  li {
+    padding: 0px;
+    font-size: 10px;
+  }
+}
+
+@media screen and( max-width: 700px) {
+  .card-container {
+    padding-left: 60px;
+    padding-right: 50px;
+    flex-direction: column;
+    .card-wrapper {
+      width: 300px;
+      height: 460px;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) and(max-width: 900px) {
+  .card-container {
+    .card-wrapper {
+      width: 235px;
+    }
+  }
+}
+
+@media screen and (min-width: 901px) and(max-width: 1024px) {
+  .card-container {
+    .card-wrapper {
+      width: 290px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .card-container {
+    .card-wrapper {
+      width: 245px;
+      height: 400px;
+    }
+  }
+}
+@media screen and(min-width: 1441px) {
+  .card-container {
+    padding-right: 14px;
+    .card-wrapper {
+      max-width: 1440px;
+    }
+  }
+}

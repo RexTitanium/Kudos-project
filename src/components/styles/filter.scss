@@ -1,0 +1,98 @@
+.LaunchYear,
+.LaunchSuccess,
+.LandSuccess {
+  text-align: center;
+  h1 {
+    font-size: 20px;
+    height: 40px;
+    border-bottom: 2px solid black;
+  }
+}
+
+.year-container,
+.launch-success,
+.land-success {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+  justify-content: start;
+}
+
+.buttons {
+  opacity: 0;
+}
+.btn {
+  background: #c5df9a;
+  color: rgb(0, 0, 0);
+  padding: 5px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    background: #7ab800;
+  }
+}
+.active-color {
+  background: #7ab800;
+}
+
+.clear-wrapper {
+  padding: 20px;
+  text-align: center;
+  border-radius: 40px;
+  .clear {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: #a4ffe4;
+    &:hover {
+      background-color: #6296b4;
+    }
+  }
+}
+
+.filter-container {
+  background: white;
+  padding: 20px 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+@media screen and (max-width: 700px) {
+  .filter-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .filter-container {
+    width: 210px;
+  }
+  .year-container,
+  .launch-success,
+  .land-success {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0px;
+    justify-content: start;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+  .LaunchSuccess,
+  .LandSuccess {
+    text-align: center;
+    h1 {
+      font-size: 20px;
+      height: 55px;
+      border-bottom: 2px solid black;
+    }
+  }
+}
