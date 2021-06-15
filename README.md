@@ -22,7 +22,13 @@
 [Kudosware Project](https://kudosware-project.netlify.app)
 
 # Project Title
-
+<br/>
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="public/assets/images/website.png" alt="Logo" width="80" height="80">
+  </a>
+</p>
+<br/>
 SpaceX Launch Program
 
 ## Description
