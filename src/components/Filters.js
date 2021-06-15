@@ -54,7 +54,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
       <h1>Filters</h1>
       <div name="LaunchYear" className="LaunchYear">
         <h1>Launch Year</h1>
-        <div className="col-12 year_container">{ly}</div>
+        <div className="year_container">{ly}</div>
       </div>
       <div className="LaunchSuccess">
         <h1>Launch Success</h1>
