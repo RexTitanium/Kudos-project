@@ -51,13 +51,15 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
 
   return (
     <div className="filter_container">
-      <h1>Filters</h1>
+      <h1>
+        <strong>Filters</strong>
+      </h1>
       <div name="LaunchYear" className="LaunchYear">
         <h1>Launch Year</h1>
         <div className="year_container">{ly}</div>
       </div>
       <div className="LaunchSuccess">
-        <h1>Launch Success</h1>
+        <h1>Successful Launch</h1>
         <div name="launch_success" className="launch_success">
           <div className="button_column">
             <input
@@ -94,7 +96,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
         </div>
       </div>
       <div className="LandSuccess">
-        <h1>Land Success</h1>
+        <h1>Successful Landing</h1>
         <div className="land_success">
           <div className="button_column">
             <input

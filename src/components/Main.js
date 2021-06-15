@@ -91,7 +91,9 @@ function Main() {
   return (
     <div className="container_body">
       <div className="header">
-        <h1>SpaceX Launch Programs</h1>
+        <h1>
+          <strong>SpaceX Launch Programs</strong>
+        </h1>
       </div>
       <div className="home">
         <div className="filters">
