@@ -16,7 +16,7 @@
     padding: 20px 20px;
     border-radius: 5px;
     width: 100%;
-    min-height: fit-content;
+    max-height: fit-content;
     overflow: hidden;
     .image_wrapper {
       background-color: #f1f1f1;
@@ -93,7 +93,7 @@
   .card_container {
     padding-right: 14px;
     .card_wrapper {
-      max-width: 310px;
+      max-width: 280px;
     }
   }
 }
