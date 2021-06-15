@@ -1,8 +1,6 @@
 .LaunchYear,
 .LaunchSuccess,
 .LandSuccess {
-  margin-top: 50px;
-  margin-bottom: 20px;
   text-align: center;
   h1 {
     font-size: 20px;
@@ -16,19 +14,11 @@
 .land_success {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+
   justify-content: space-between;
-  &::after {
-    content: "";
-    display: table;
-    gap: 10px;
-    clear: both;
-  }
-  div {
-    float: left;
-    width: 50%;
-    padding: 15px;
-    height: 50px;
-  }
 }
 
 .buttons {

@@ -59,7 +59,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
       <div className="LaunchSuccess">
         <h1>Launch Success</h1>
         <div name="launch_success" className="launch_success">
-          <div>
+          <div className="button_column">
             <input
               className="buttons"
               name="launch_success"
@@ -75,7 +75,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               True
             </label>
           </div>
-          <div>
+          <div className="button_column">
             <input
               className="buttons"
               name="launch_success"
@@ -96,7 +96,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
       <div className="LandSuccess">
         <h1>Land Success</h1>
         <div className="land_success">
-          <div>
+          <div className="button_column">
             <input
               className="buttons"
               name="launch_success"
@@ -112,7 +112,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               True
             </label>
           </div>
-          <div>
+          <div className="button_column">
             <input
               className="buttons"
               name="launch_success"
