@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open%20Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-.card-container {
+.card_container {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -11,14 +11,14 @@
   gap: 10px;
   margin-top: 50px;
 
-  .card-wrapper {
+  .card_wrapper {
     background-color: white;
     padding: 20px 20px;
     border-radius: 5px;
-    width: 260px;
-    height: 420px;
+    width: 100%;
+    min-height: fit-content;
     overflow: hidden;
-    .image-wrapper {
+    .image_wrapper {
       background-color: #f1f1f1;
 
       padding: 20px 20px;
@@ -28,11 +28,11 @@
     }
     h1 {
       margin-bottom: 5px;
-      font-size: 13px;
+      font-size: 15px;
 
       font-family: "Roboto";
     }
-    .card-details {
+    .card_details {
       padding-left: 0px;
       h1 {
         margin-top: 14px;
@@ -41,62 +41,59 @@
   }
 }
 
-.sat-name {
+.sat_name {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px !important;
   margin-top: 10px;
   color: #54578f;
 }
 
-.mission-id ul {
+.mission_id ul {
   li {
     padding: 0px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
 @media screen and( max-width: 700px) {
-  .card-container {
-    padding-left: 60px;
-    padding-right: 50px;
+  .card_container {
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: column;
-    .card-wrapper {
-      width: 300px;
-      height: 460px;
-    }
   }
 }
 
 @media screen and (min-width: 700px) and(max-width: 900px) {
-  .card-container {
-    .card-wrapper {
-      width: 235px;
+  .card_container {
+    padding-left: 20px;
+    .card_wrapper {
+      max-width: 220px;
     }
   }
 }
 
-@media screen and (min-width: 901px) and(max-width: 1024px) {
-  .card-container {
-    .card-wrapper {
-      width: 290px;
+@media screen and (min-width: 900px) and(max-width: 1024px) {
+  .card_container {
+    padding-left: 40px;
+    .card_wrapper {
+      max-width: 290px;
     }
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  .card-container {
-    .card-wrapper {
-      width: 245px;
-      height: 400px;
+  .card_container {
+    .card_wrapper {
+      max-width: 245px;
     }
   }
 }
 @media screen and(min-width: 1441px) {
-  .card-container {
+  .card_container {
     padding-right: 14px;
-    .card-wrapper {
-      max-width: 1440px;
+    .card_wrapper {
+      max-width: 310px;
     }
   }
 }

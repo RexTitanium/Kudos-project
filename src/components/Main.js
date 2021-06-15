@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Row from "./Row";
 import Filters from "./Filters";
 import requests from "../request/requests";
@@ -30,7 +30,7 @@ function Main() {
   const [launchyear, setLaunchYear] = useState("");
   const [valid, setValid] = useState("");
   const [landsuc, setLandSuc] = useState("");
-  const [withoutfilter, setFilter] = useState("true");
+
   var filter = "";
 
   //IF ELSE STRUCTURE ALTERNATIVE
@@ -65,27 +65,31 @@ function Main() {
 
   filter =
     filter +
-    (launchyear
-      ? valid
+    (launchyear || valid || landsuc
+      ? launchyear
+        ? valid || landsuc
+          ? valid
+            ? landsuc
+              ? fetchLaunchYear +
+                launchyear +
+                fetchLaunchSuccess +
+                valid +
+                fetchLandSuccess +
+                landsuc
+              : fetchLaunchYear + launchyear + fetchLaunchSuccess + valid
+            : fetchLaunchYear + launchyear + fetchLandSuccess + landsuc
+          : fetchLaunchYear + launchyear
+        : valid
         ? landsuc
-          ? fetchLaunchYear +
-            launchyear +
-            fetchLaunchSuccess +
-            valid +
-            fetchLandSuccess +
-            landsuc
-          : fetchLaunchYear + launchyear + fetchLaunchSuccess + valid
-        : fetchLaunchYear + launchyear
-      : valid
-      ? landsuc
-        ? fetchLaunchSuccess + valid + fetchLandSuccess + landsuc
-        : fetchLaunchSuccess + valid
-      : fetchLandSuccess + landsuc);
+          ? fetchLaunchSuccess + valid + fetchLandSuccess + landsuc
+          : fetchLaunchSuccess + valid
+        : fetchLandSuccess + landsuc
+      : "");
 
   console.log(filter);
 
   return (
-    <div>
+    <div className="container_body">
       <div className="header">
         <h1>SpaceX Launch Programs</h1>
       </div>
@@ -97,20 +101,15 @@ function Main() {
             setValid={setValid}
             requests={requests}
             setLandSuc={setLandSuc}
-            setFilter={setFilter}
           />
         </div>
 
-        <div className="sat-row">
-          <Row
-            className="sat-row"
-            fetchUrl={withoutfilter ? " " : filter}
-            requests={requests}
-          />
+        <div className="sat_row">
+          <Row fetchUrl={filter} requests={requests} />
         </div>
       </div>
-      <div className="footer-container">
-        <h1 className="footer-header">
+      <div className="footer_container">
+        <h1 className="footer_header">
           <strong>Developed By : </strong> Samyak K. Shah
         </h1>
       </div>

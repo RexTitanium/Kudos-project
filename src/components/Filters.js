@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import "./styles/filter.scss";
 
 function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
@@ -9,38 +9,25 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
     setLaunchYear("");
     setValid("");
     setLandSuc("");
-    setFilter(true);
     setActive("");
     setLsActive("");
     setLfActive("");
   };
 
-  const checkLaunchYear = useCallback(
-    (e) => {
-      setLaunchYear(e.target.value);
-      setFilter(false);
-      setActive(e.target.value);
-    },
-    [setLaunchYear]
-  );
+  const checkLaunchYear = (e) => {
+    setLaunchYear(e.target.value);
+    setActive(e.target.value);
+  };
 
-  const checkLaunchSuccess = useCallback(
-    (e) => {
-      setValid(e.target.value);
-      setFilter(false);
-      setLsActive(e.target.value);
-    },
-    [setValid]
-  );
+  const checkLaunchSuccess = (e) => {
+    setValid(e.target.value);
+    setLsActive(e.target.value);
+  };
 
-  const checkLandSuccess = useCallback(
-    (e) => {
-      setLandSuc(e.target.value);
-      setFilter(false);
-      setLfActive(e.target.value);
-    },
-    [setLandSuc]
-  );
+  const checkLandSuccess = (e) => {
+    setLandSuc(e.target.value);
+    setLfActive(e.target.value);
+  };
   const ly = years.map((year, i) => {
     return (
       <div key={i + 1} className="years">
@@ -53,7 +40,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
           onClick={checkLaunchYear}
         />
         <label
-          className={`btn ${activeButton == year ? "active-color" : ""}`}
+          className={`btn ${activeButton === year ? "active" : ""}`}
           htmlFor={year}
         >
           {year}
@@ -63,15 +50,15 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
   });
 
   return (
-    <div className="filter-container">
+    <div className="filter_container">
       <h1>Filters</h1>
       <div name="LaunchYear" className="LaunchYear">
         <h1>Launch Year</h1>
-        <div className="col-12 year-container">{ly}</div>
+        <div className="col-12 year_container">{ly}</div>
       </div>
       <div className="LaunchSuccess">
         <h1>Launch Success</h1>
-        <div name="launch_success" className="launch-success">
+        <div name="launch_success" className="launch_success">
           <div>
             <input
               className="buttons"
@@ -82,7 +69,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               onClick={checkLaunchSuccess}
             />
             <label
-              className={`btn ${lsButton == "true" ? "active-color" : ""}`}
+              className={`btn ${lsButton === "true" ? "active" : ""}`}
               htmlFor="launch-t"
             >
               True
@@ -98,7 +85,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               onClick={checkLaunchSuccess}
             />
             <label
-              className={`btn ${lsButton == "false" ? "active-color" : ""}`}
+              className={`btn ${lsButton === "false" ? "active" : ""}`}
               htmlFor="launch-f"
             >
               False
@@ -108,7 +95,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
       </div>
       <div className="LandSuccess">
         <h1>Land Success</h1>
-        <div className="land-success">
+        <div className="land_success">
           <div>
             <input
               className="buttons"
@@ -119,7 +106,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               onClick={checkLandSuccess}
             />
             <label
-              className={`btn ${lfButton == "true" ? "active-color" : ""}`}
+              className={`btn ${lfButton === "true" ? "active" : ""}`}
               htmlFor="land-t"
             >
               True
@@ -135,7 +122,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
               onClick={checkLandSuccess}
             />
             <label
-              className={`btn ${lfButton == "false" ? "active-color" : ""}`}
+              className={`btn ${lfButton === "false" ? "active" : ""}`}
               htmlFor="land-f"
             >
               False
@@ -144,7 +131,7 @@ function Filters({ years, setLandSuc, setValid, setLaunchYear, setFilter }) {
         </div>
       </div>
 
-      <div className="clear-wrapper">
+      <div className="clear_wrapper">
         <button className="clear" onClick={clearAll}>
           Clear all filters
         </button>

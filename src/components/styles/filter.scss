@@ -9,15 +9,15 @@
   }
 }
 
-.year-container,
-.launch-success,
-.land-success {
+.year_container,
+.launch_success,
+.land_success {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 50px;
-  justify-content: start;
+  gap: 20px 40px;
+  justify-content: space-between;
 }
 
 .buttons {
@@ -34,11 +34,11 @@
     background: #7ab800;
   }
 }
-.active-color {
+.active {
   background: #7ab800;
 }
 
-.clear-wrapper {
+.clear_wrapper {
   padding: 20px;
   text-align: center;
   border-radius: 40px;
@@ -55,7 +55,7 @@
   }
 }
 
-.filter-container {
+.filter_container {
   background: white;
   padding: 20px 20px;
   border-radius: 5px;
@@ -63,24 +63,22 @@
 }
 
 @media screen and (max-width: 700px) {
-  .filter-container {
+  .filter_container {
     justify-content: center;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .filter-container {
+@media screen and(min-width: 700px) and (max-width: 900px) {
+  .filter_container {
     width: 210px;
   }
-  .year-container,
-  .launch-success,
-  .land-success {
+  .year_container,
+  .launch_success,
+  .land_success {
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px 0px;
-    justify-content: start;
   }
 
   .btn {

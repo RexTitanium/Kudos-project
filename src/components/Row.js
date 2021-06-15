@@ -15,7 +15,7 @@ function Row({ fetchUrl }) {
     fetchData();
   }, [fetchUrl]);
   return (
-    <div className="row">
+    <div className="card_row">
       <SatCard sats={sats} />
     </div>
   );
