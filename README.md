@@ -24,7 +24,7 @@
 # Project Title
 <br/>
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/RexTitanium/Kudos-project.git">
     <img src="public/assets/images/website.png" alt="Logo" width="800" height="400">
   </a>
 </p>
